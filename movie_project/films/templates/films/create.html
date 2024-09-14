@@ -1,0 +1,26 @@
+{% extends 'films/layoute.html' %}
+
+{% block title %}
+    <title>Кабинет рецензента</title>
+{% endblock %}
+
+{% block content %}
+<h1>Здесь можно написать аннотацию и отзыв на просмотренный фильм</h1>
+<div>
+    <h2>Карточка фильма</h2>
+    <aside>
+        <form method="post" class="p-3 border rounded">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Используйте форму, чтобы автоматически обработать поля и их ошибки -->
+
+            <button type="submit" class="btn btn-primary btn-block">Всё готово!</button>
+        </form>
+    </aside>
+
+    {% if error %}
+        <div class="alert alert-danger mt-3">
+            {{ error }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

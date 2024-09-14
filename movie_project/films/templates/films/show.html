@@ -1,0 +1,22 @@
+{% extends 'films/layoute.html' %}
+
+{% block title %}
+    <title>Зрительный зал  </title>
+{% endblock %}
+
+{% block content%}
+    <h1>Фильмы: содержание и отзывы</h1>
+
+{% for film in films %}
+	<div>
+		<h3> {{ film.title }} </h3>
+		<p> {{ film.text1 }} </p>
+		<p><i> {{ film.text2 }} </i></p>
+		<p align="right"><strong> {{ film.pub_date }} </strong></p>
+		 <hr>
+		 <hr>
+	</div>
+{% endfor %}
+
+{% endblock %}
+

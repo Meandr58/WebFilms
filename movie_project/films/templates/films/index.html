@@ -1,0 +1,16 @@
+{% extends 'films/layoute.html' %}
+{% load static %}
+{% block title %}
+    <title>КИНОРЕЦЕНЗИЯ</title>
+{% endblock %}
+
+{% block content %}
+<!-- Добавляем иллюстрацию перед основным контентом -->
+
+
+    <h2>Рады приветствовать Вас на главной странице сайта КИНОРЕЦЕНЗИЯ</h2>
+    <div class="text-center my-12">
+        <img src="{% static 'films/img/move.jpg' %}" alt="Кинозал" class="img-fluid">
+    </div>
+
+{% endblock %}
